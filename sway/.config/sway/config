@@ -23,11 +23,7 @@ set $menu wmenu-run
 
 # exec_always feh --bg-scale $HOME/Pictures/wallpaper.jpg
 
-output * bg $HOME/Pictures/wallpaper.jpg fill
-
-set $opacity 0.9
-for_window [class="Alacritty"] opacity $opacity
-# for_window [app_id=".*"] opacity $opacity
+output * bg $HOME/.backgrounds/wallpaper.jpg fill
 
 gaps inner 10
 default_border none
