@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# config file path
+CONFIG_FILE="$HOME/.config/nixos/configuration.nix"
+
+# Check if the configuration file exists
+if [ ! -f "$CONFIG_FILE" ]; then
+    echo "Configuration file not found: $CONFIG_FILE"
+    exit 1
+fi
+
+
+# create a symlink to the nixos hardware config file
+if [ ! -L ~/.config/nixos/hardware-configuration.nix ]; then
+    ln -s /etc/nixos/hardware-configuration.nix ~/.config/nixos/hardware-configuration.nix
+fi
+
+
+# Run the nixos-rebuild command
+sudo nixos-rebuild switch \
+    -I nixos-config="$CONFIG_FILE"
+
+# to run this file use the command: bash os-rebuild
