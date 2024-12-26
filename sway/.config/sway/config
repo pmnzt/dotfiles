@@ -28,6 +28,10 @@ output * bg $HOME/.backgrounds/wallpaper.jpg fill
 gaps inner 10
 default_border none
 
+input type:touchpad {
+   natural_scroll enable
+}
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
