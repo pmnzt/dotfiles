@@ -26,8 +26,8 @@ set $menu wmenu-run
 output * bg $HOME/Pictures/wallpaper.jpg fill
 
 set $opacity 0.9
-for_window [class=".*"] opacity $opacity
-for_window [app_id=".*"] opacity $opacity
+for_window [class="Alacritty"] opacity $opacity
+# for_window [app_id=".*"] opacity $opacity
 
 gaps inner 10
 default_border none
