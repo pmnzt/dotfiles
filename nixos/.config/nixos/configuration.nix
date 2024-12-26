@@ -94,6 +94,7 @@
      lxappearance
      libsForQt5.qt5ct
      dconf-editor
+     tmux
   ];
 
   services.gnome.gnome-keyring.enable = true;
