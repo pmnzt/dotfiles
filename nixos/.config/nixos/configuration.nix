@@ -95,6 +95,10 @@
      libsForQt5.qt5ct
      dconf-editor
      tmux
+     nodejs_22
+     unzip
+     bun
+     zed-editor
   ];
 
   services.gnome.gnome-keyring.enable = true;
