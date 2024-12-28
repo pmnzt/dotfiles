@@ -99,6 +99,7 @@
      unzip
      bun
      zed-editor
+     neovim
   ];
 
   services.gnome.gnome-keyring.enable = true;
