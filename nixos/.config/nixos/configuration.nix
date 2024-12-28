@@ -100,6 +100,8 @@
      bun
      zed-editor
      neovim
+     gcc
+     gnumake
   ];
 
   services.gnome.gnome-keyring.enable = true;
