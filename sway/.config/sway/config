@@ -106,6 +106,7 @@ input type:touchpad {
 
 
     bindsym $mod+x exec systemctl suspend
+    bindsym $mod+z exec swaylock -f -c 000000
 #
 # Moving around:
 #
