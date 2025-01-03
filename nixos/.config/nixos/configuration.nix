@@ -88,6 +88,7 @@
      feh
      darkman
      git 
+     lazygit
      stow
      killall
      htop
