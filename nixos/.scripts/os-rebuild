@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # config file path
 CONFIG_FILE="$HOME/.config/nixos/configuration.nix"
@@ -20,4 +20,4 @@ fi
 sudo nixos-rebuild switch \
     -I nixos-config="$CONFIG_FILE"
 
-# to run this file use the command: bash os-rebuild
+# to run this file use the command: os-rebuild
