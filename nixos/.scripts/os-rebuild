@@ -2,6 +2,10 @@
 
 # config file path
 CONFIG_FILE="$HOME/.config/nixos/configuration.nix"
+UEFI_CONFIG_FILE="$HOME/.config/nixos/nixos-uefi.nix"
+
+# Boolean variable for UEFI usage
+USE_UEFI=true  # Change this to false if you don't want to use UEFI
 
 # Check if the configuration file exists
 if [ ! -f "$CONFIG_FILE" ]; then
@@ -9,15 +13,18 @@ if [ ! -f "$CONFIG_FILE" ]; then
     exit 1
 fi
 
-
-# create a symlink to the nixos hardware config file
+# Create a symlink to the nixos hardware config file
 if [ ! -L ~/.config/nixos/hardware-configuration.nix ]; then
     ln -s /etc/nixos/hardware-configuration.nix ~/.config/nixos/hardware-configuration.nix
 fi
 
+# Determine the config file to use based on the UEFI setting
+if [ "$USE_UEFI" = true ]; then
+    CONFIG_FILE="$UEFI_CONFIG_FILE"
+fi
 
 # Run the nixos-rebuild command
 sudo nixos-rebuild switch \
     -I nixos-config="$CONFIG_FILE"
 
-# to run this file use the command: os-rebuild
+# To run this file use the command: os-rebuild
