@@ -84,6 +84,7 @@
      lazygit
      firefox
      neovim
+     nodejs_22
   ];
 
   services.gnome.gnome-keyring.enable = true;
