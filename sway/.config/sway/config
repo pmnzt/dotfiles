@@ -18,6 +18,10 @@ set $right l
 set $term alacritty
 # Your preferred application launcher
 set $menu wmenu-run
+# preferred application for browser
+set $browser firefox
+# preferred application for file system 
+set $foldersapp thunar
 
 # bindsym $mod+x exec killall -SIGUSR1 waybar
 
@@ -84,6 +88,12 @@ input type:touchpad {
 
     # Start a terminal
     bindsym $mod+Return exec $term
+
+    # Start a browser
+    bindsym $mod+i exec $browser
+
+    # Start folders app
+    bindsym $mod+t exec $foldersapp
 
     # Kill focused window
     bindsym $mod+q kill
