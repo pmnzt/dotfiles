@@ -88,6 +88,7 @@
      firefox
      neovim
      nodejs_22
+     bun
      slurp
      feh
      wl-clipboard
