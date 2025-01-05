@@ -91,6 +91,7 @@
      slurp
      feh
      wl-clipboard
+     pulsemixer
   ];
 
   services.gnome.gnome-keyring.enable = true;
