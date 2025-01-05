@@ -89,6 +89,7 @@
      neovim
      nodejs_22
      slurp
+     feh
   ];
 
   services.gnome.gnome-keyring.enable = true;
