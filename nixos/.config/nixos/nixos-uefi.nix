@@ -87,6 +87,7 @@
      lazygit
      firefox
      neovim
+     zed-editor
      nodejs_22
      bun
      slurp
