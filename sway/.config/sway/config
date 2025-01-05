@@ -107,8 +107,13 @@ input type:keyboard {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    
 
-    bindsym $mod+o exec grim
+    # take a full screenshoot, make sure to mkdir -p ~/Pictures/screenshots first
+    bindsym $mod+o exec grim ~/Pictures/screenshots/$(date +'%s_grim.png')
+    # take screenshot with slurp to select a region and screenshoot it
+    bindsym $mod+p exec grim -g "$(slurp)" ~/Pictures/screenshots/$(date +'%s_grim.png')    
+
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
