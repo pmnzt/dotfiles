@@ -110,9 +110,9 @@ input type:keyboard {
     
 
     # take a full screenshoot, make sure to mkdir -p ~/Pictures/screenshots first
-    bindsym $mod+o exec grim ~/Pictures/screenshots/$(date +'%s_grim.png')
+    bindsym $mod+o exec IMG=~/Pictures/screenshots/$(date +'%s_grim.png') && grim $IMG && wl-copy < $IMG
     # take screenshot with slurp to select a region and screenshoot it
-    bindsym $mod+p exec grim -g "$(slurp)" ~/Pictures/screenshots/$(date +'%s_grim.png')    
+    bindsym $mod+p exec IMG=~/Pictures/screenshots/$(date +'%s_grim.png') && grim -g "$(slurp)" $IMG && wl-copy < $IMG
 
 
     # Drag floating windows by holding down $mod and left mouse button.
