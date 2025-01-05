@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+# Function to list generations
+list_generations() {
+    sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
+}
+
+# Function to switch generations
+switch_generation() {
+    local generation="$1"
+
+    if [[ -z "$generation" ]]; then
+        echo "Error: Please provide a generation number to switch to."
+        return 1
+    fi
+
+    sudo nix-env --profile /nix/var/nix/profiles/system --switch-generation "$generation"
+}
+
+# Function to delete generations
+delete_generations() {
+    if [[ $# -eq 0 ]]; then
+        echo "Error: Please provide generation numbers to delete."
+        return 1
+    fi
+
+    sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations "$@"
+}
+
+# Main script logic
+if [[ $# -eq 0 ]]; then
+    echo "Usage: $0 {ls|switch <generation>|delete <generations>...}"
+    exit 1
+fi
+
+case "$1" in
+    "ls")
+        list_generations
+        ;;
+    "switch")
+        switch_generation "$2"
+        ;;
+    "delete")
+        delete_generations "${@:2}"
+        ;;
+    *)
+        echo "Error: Invalid argument."
+        echo "Usage: $0 {ls|switch <generation>|delete <generations>...}"
+        exit 1
+        ;;
+esac
