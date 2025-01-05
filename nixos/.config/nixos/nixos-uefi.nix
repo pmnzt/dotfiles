@@ -90,6 +90,7 @@
      nodejs_22
      slurp
      feh
+     wl-clipboard
   ];
 
   services.gnome.gnome-keyring.enable = true;
