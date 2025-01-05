@@ -78,6 +78,8 @@
      wget
      git
      stow
+     mako
+     libnotify
      alacritty
      fastfetch
      htop
