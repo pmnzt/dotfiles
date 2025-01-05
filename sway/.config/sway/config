@@ -36,6 +36,11 @@ input type:touchpad {
    natural_scroll enable
 }
 
+input type:keyboard {
+   xkb_layout us,sy
+   xkb_options grp:win_space_toggle
+}
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
