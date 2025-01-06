@@ -94,6 +94,7 @@
      feh
      wl-clipboard
      pulsemixer
+     gcc
   ];
 
   services.gnome.gnome-keyring.enable = true;
