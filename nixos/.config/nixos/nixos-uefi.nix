@@ -95,6 +95,7 @@
      wl-clipboard
      pulsemixer
      gcc
+     unzip
   ];
 
   services.gnome.gnome-keyring.enable = true;
