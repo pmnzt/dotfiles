@@ -88,6 +88,7 @@
      firefox
      neovim
      zed-editor
+     vscodium-fhs
      nodejs_22
      bun
      slurp
