@@ -1,0 +1,5 @@
+*
+!.gitignore
+!settings.json
+!extensions.json
+!global.code-snippets
