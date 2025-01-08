@@ -100,6 +100,10 @@
      unzip
   ];
 
+  fonts.packages = with pkgs; [
+     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" ]; })
+  ];
+
   services.gnome.gnome-keyring.enable = true;
 
   programs.sway = {
