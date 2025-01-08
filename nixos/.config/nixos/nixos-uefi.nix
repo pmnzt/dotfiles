@@ -84,6 +84,7 @@
      fastfetch
      htop
      tmux
+     tmuxifier
      lazygit
      firefox
      neovim
