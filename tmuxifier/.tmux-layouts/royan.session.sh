@@ -12,6 +12,7 @@ if initialize_session "royan"; then
   split_v 20
   run_cmd "bun dev"
   split_h 50
+  rum_cmd "codium ."
   select_pane 0
   # Load a defined window layout.
   #load_window "example"
