@@ -2,7 +2,7 @@
 keybindings can be viewed inside ~/sway/.config/sway/config
 
 Here are a few:
-Mod is currently set to `alt`.
+Mod is currently set to `Super | CapsLock`.
 
 | Keybinding          | Action                                 |
 |---------------------|----------------------------------------|

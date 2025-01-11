@@ -6,8 +6,8 @@
 
 ### Variables
 #
-# Logo key. Use Mod4 for superkey.
-set $mod Mod1
+# Logo key. Use Mod1 for alt.
+set $mod Mod4
 # exec_always killall waybar
 # Home row direction keys, like vim
 set $left h
@@ -38,7 +38,7 @@ input type:touchpad {
 
 input type:keyboard {
    xkb_layout us,sy
-   xkb_options grp:win_space_toggle
+   xkb_options grp:win_space_toggle,caps:super
 }
 
 ### Output configuration
