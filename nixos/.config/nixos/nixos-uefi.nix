@@ -63,7 +63,7 @@
   users.users.alice = {
      isNormalUser = true;
      initialPassword = "pw123";
-     extraGroups = [ "wheel" "networkmanager" "libvirt" ]; # wheel Enables ‘sudo’ for the user.
+     extraGroups = [ "wheel" "networkmanager" "libvirtd" ]; # wheel Enables ‘sudo’ for the user.
      packages = with pkgs; [
        tree
      ];
@@ -98,9 +98,14 @@
      pulsemixer
      gcc
      unzip
-     virt-manager
-     qemu
   ];
+
+  # virtualization
+  programs.virt-manager.enable = true;
+  users.groups.libvirtd.members = ["alice"];
+  virtualisation.spiceUSBRedirection.enable = true;
+  virtualisation.libvirtd.enable = true;
+
 
   fonts.packages = with pkgs; [
      (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" ]; })
