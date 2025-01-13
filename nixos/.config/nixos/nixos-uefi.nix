@@ -98,6 +98,8 @@
      pulsemixer
      gcc
      unzip
+     virt-manager
+     qemu
   ];
 
   fonts.packages = with pkgs; [
