@@ -30,7 +30,8 @@ set $foldersapp thunar
 output * bg $HOME/.backgrounds/wall2.png fill
 
 gaps inner 7
-default_border pixel 3
+# default_border pixel 3
+default_border none
 
 ## Colours
 set $base00 #282828
