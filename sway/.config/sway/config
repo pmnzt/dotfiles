@@ -27,7 +27,7 @@ set $foldersapp thunar
 
 # exec_always feh --bg-scale $HOME/Pictures/wallpaper.jpg
 
-output * bg $HOME/.backgrounds/wallpaper.jpg fill
+output * bg $HOME/.backgrounds/wall2.png fill
 
 gaps inner 7
 default_border pixel 3
