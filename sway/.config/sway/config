@@ -140,7 +140,9 @@ input type:keyboard {
     bindsym $mod+o exec IMG=~/Pictures/screenshots/$(date +'%s_grim.png') && grim $IMG && wl-copy < $IMG
     # take screenshot with slurp to select a region and screenshoot it
     bindsym $mod+p exec IMG=~/Pictures/screenshots/$(date +'%s_grim.png') && grim -g "$(slurp)" $IMG && wl-copy < $IMG
-
+    
+    # Map Mod+n to open Alacritty and run nmtui
+    bindsym $mod+n exec alacritty -e nmtui
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
