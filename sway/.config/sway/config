@@ -22,6 +22,8 @@ set $menu wmenu-run
 set $browser firefox
 # preferred application for file system 
 set $foldersapp thunar
+# preferred application for audio mixer
+set $mixer pulsemixer
 
 # bindsym $mod+x exec killall -SIGUSR1 waybar
 
@@ -144,6 +146,9 @@ input type:keyboard {
     
     # Map Mod+n to open Alacritty and run nmtui
     bindsym $mod+n exec alacritty -e nmtui
+
+    # Map Mod+g to open Alacritty and run audio mixer
+    bindsym $mod+g exec alacritty -e $mixer
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
