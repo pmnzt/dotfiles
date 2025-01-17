@@ -98,6 +98,7 @@
      pulsemixer
      gcc
      unzip
+     brave
   ];
 
   # virtualization
