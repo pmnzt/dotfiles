@@ -63,7 +63,7 @@
   users.users.alice = {
      isNormalUser = true;
      initialPassword = "pw123";
-     extraGroups = [ "wheel" "networkmanager" "libvirtd" ]; # wheel Enables ‘sudo’ for the user.
+     extraGroups = [ "wheel" "networkmanager" "libvirtd" "disk" ]; # wheel Enables ‘sudo’ for the user.
      packages = with pkgs; [
        tree
      ];
