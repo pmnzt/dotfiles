@@ -92,6 +92,7 @@
      vscodium-fhs
      nodejs_22
      bun
+     deno
      slurp
      feh
      wl-clipboard
@@ -99,6 +100,7 @@
      gcc
      unzip
      brave
+     postgresql_15
   ];
 
   # virtualization
