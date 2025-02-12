@@ -100,8 +100,11 @@
      gcc
      unzip
      brave
-     postgresql_15
+     postgresql
   ];
+
+  services.postgresql.enable = true;
+  services.postgresql.package = pkgs.postgresql_15; 
 
   # virtualization
   programs.virt-manager.enable = true;
