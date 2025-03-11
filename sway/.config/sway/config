@@ -121,7 +121,7 @@ input type:keyboard {
          before-sleep 'swaylock -f -c 000000'
     
     # send date and time in a notification
-    bindsym $mod+m exec notify-send "$(date +"%A %B %d %Y %n %R %Z")" -t 1000
+    bindsym $mod+t exec notify-send "$(date +"%A %B %d %Y %n %R %Z")" -t 1000
 
     # Start a terminal
     bindsym $mod+Return exec $term
@@ -130,7 +130,7 @@ input type:keyboard {
     bindsym $mod+i exec $browser
 
     # Start folders app
-    bindsym $mod+t exec $foldersapp
+    bindsym $mod+m exec $foldersapp
 
     # Kill focused window
     bindsym $mod+q kill

@@ -6,10 +6,10 @@ Mod is currently set to `Super | CapsLock`.
 
 | Keybinding          | Action                                 |
 |---------------------|----------------------------------------|
-| `mod+t`             | Open file manager                      |
+| `mod+m`             | Open file manager                      |
 | `mod+i`             | Open browser                           |
 | `mod+enter`        | Open terminal                          |
-| `mod+m`             | Show date as a notification             |
+| `mod+t`             | Show date as a notification             |
 | `mod+x`             | Lock screen and suspend systemd       |
 | `mod+z`             | Lock screen                            |
 | `Win+space`         | Toggle keyboard locale                 |
