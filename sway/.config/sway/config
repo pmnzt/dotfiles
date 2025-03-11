@@ -121,7 +121,8 @@ input type:keyboard {
          before-sleep 'swaylock -f -c 000000'
     
     # send date and time in a notification
-    bindsym $mod+t exec notify-send "$(date +"%A %B %d %Y %n %R %Z")" -t 1000
+    # bindsym $mod+t exec notify-send "$(date +"%A %B %d %Y %n %R %Z")" -t 1000
+    bindsym $mod+t exec notify-send "$(date +"%I:%M %p%n%A %d/%m/%Y")" -t 3000
 
     # Start a terminal
     bindsym $mod+Return exec $term
