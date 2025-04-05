@@ -103,6 +103,7 @@
      brave
      postgresql
      bruno
+     pnpm
   ];
 
   services.postgresql.enable = true;
