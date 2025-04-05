@@ -99,8 +99,10 @@
      pulsemixer
      gcc
      unzip
+     zip
      brave
      postgresql
+     bruno
   ];
 
   services.postgresql.enable = true;
