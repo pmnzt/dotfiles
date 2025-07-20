@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+#!/usr/bin/env bash
+
+echo "Attempting to stop systemd-timesyncd service..."
+if sudo systemctl stop systemd-timesyncd.service; then
+    echo "Successfully stopped systemd-timesyncd service."
+else
+    echo "Failed to stop systemd-timesyncd service. Exiting."
+    exit 1
+fi
+
+echo "Attempting to synchronize hardware clock from system clock..."
+if sudo hwclock --systohc; then
+    echo "Successfully synchronized hardware clock (RTC) with system time."
+else
+    echo "Failed to synchronize hardware clock. Exiting."
+    exit 1
+fi
+
+echo "Attempting to start systemd-timesyncd service..."
+if sudo systemctl start systemd-timesyncd.service; then
+    echo "Successfully started systemd-timesyncd service."
+    echo "Time synchronization should now resume."
+else
+    echo "Failed to start systemd-timesyncd service. Please check its status manually."
+    exit 1
+fi
+
+echo "Script completed successfully."
+echo "You can verify the time status with 'timedatectl status' or By pressing Mod+t."
