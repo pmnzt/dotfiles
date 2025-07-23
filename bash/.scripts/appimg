@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Check if a name was provided
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 <app_name> [extra_args]"
+    exit 1
+fi
+
+# Get the app name and any extra arguments
+app_name="$1"
+shift
+extra_args="$@"
+
+# Construct the path to the app image
+app_path="$HOME/appimages/$app_name.AppImage"
+
+# Check if the app image exists
+if [ ! -f "$app_path" ]; then
+    echo "Error: '$app_path' not found."
+    exit 1
+fi
+
+# Run the app image using nix-shell and appimage-run
+nix-shell -p appimage-run --run "appimage-run '$app_path' $extra_args"
