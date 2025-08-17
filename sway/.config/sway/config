@@ -113,6 +113,8 @@ input type:keyboard {
 #
 # Basics:
 #
+    exec lxqt-policykit-agent
+
 
     exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \

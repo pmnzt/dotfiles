@@ -107,7 +107,8 @@
      postgresql
      bruno
      pnpm
-     terraria-server
+     polkit
+     lxqt.lxqt-policykit
   ];
 
   services.postgresql.enable = true;
