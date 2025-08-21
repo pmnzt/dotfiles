@@ -15,6 +15,7 @@ Mod is currently set to `Super | CapsLock`.
 | `Win+space`         | Toggle keyboard locale                 |
 | `mod+o`             | Take full screenshot                   |
 | `mod+p`             | Take interactive screenshot            |
+| `mod+.`             | open a txt file for typing anything quickly           |
 
 **Note:** Make sure to create the directory for screenshots:
 ```bash

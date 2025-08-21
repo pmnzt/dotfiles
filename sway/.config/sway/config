@@ -141,6 +141,8 @@ input type:keyboard {
     # Start your launcher
     bindsym $mod+d exec $menu
     
+    # Open Quick File
+    bindsym $mod+period exec alacritty -e nvim ~/working_memory.txt
 
     # take a full screenshoot, make sure to mkdir -p ~/Pictures/screenshots first
     bindsym $mod+o exec IMG=~/Pictures/screenshots/$(date +'%s_grim.png') && grim $IMG && wl-copy < $IMG
