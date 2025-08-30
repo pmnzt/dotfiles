@@ -107,6 +107,7 @@
      unzip 
      xfce.thunar-archive-plugin
      xarchiver
+     file-roller
   ];
 
   services.gnome.gnome-keyring.enable = true;
