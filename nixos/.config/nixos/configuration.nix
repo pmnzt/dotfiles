@@ -103,6 +103,9 @@
      neovim
      gcc
      gnumake
+     pnpm
+     unzip 
+     thunar-archive-plugin
   ];
 
   services.gnome.gnome-keyring.enable = true;

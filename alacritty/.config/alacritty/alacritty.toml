@@ -3,7 +3,7 @@ opacity = 0.9
 padding = { x = 10, y = 10 }
 
 [font]
-normal = { family = "Hack Nerd Font", style = "Regular" }
+# normal = { family = "Hack Nerd Font", style = "Regular" }
 
 # Theme: enfocado_dark
 # Source:  https://github.com/wuelnerdotexe/vim-enfocado
