@@ -73,6 +73,7 @@
   };
 
   programs.firefox.enable = true;
+  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -83,6 +84,8 @@
      slurp
      wl-clipboard
      mako
+     libnotify
+     pulsemixer
      fastfetch
      alacritty
      feh
@@ -105,6 +108,8 @@
      gnumake
      pnpm
      unzip 
+     brave
+     bruno
      xfce.thunar-archive-plugin
      xarchiver
      file-roller
