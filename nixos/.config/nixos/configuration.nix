@@ -108,8 +108,6 @@
      gnumake
      pnpm
      unzip 
-     brave
-     bruno
      xfce.thunar-archive-plugin
      xarchiver
      file-roller
