@@ -4,8 +4,15 @@
 CONFIG_FILE="$HOME/.config/nixos/configuration.nix"
 UEFI_CONFIG_FILE="$HOME/.config/nixos/nixos-uefi.nix"
 
-# Boolean variable for UEFI usage
-USE_UEFI=true  # Change this to false if you don't want to use UEFI
+# Ask user for UEFI choice
+read -p "Do you want to use UEFI? (yes/no): " USE_UEFI_INPUT
+
+# Set USE_UEFI based on user input
+if [[ "$USE_UEFI_INPUT" == "yes" || "$USE_UEFI_INPUT" == "y" ]]; then
+    USE_UEFI=true
+else
+    USE_UEFI=false
+fi
 
 # Determine the config file to use based on the UEFI setting
 if [ "$USE_UEFI" = true ]; then
@@ -23,9 +30,7 @@ if [ ! -L ~/.config/nixos/hardware-configuration.nix ]; then
     ln -s /etc/nixos/hardware-configuration.nix ~/.config/nixos/hardware-configuration.nix
 fi
 
-
 # Run the nixos-rebuild command
-sudo nixos-rebuild switch \
-    -I nixos-config="$CONFIG_FILE"
+sudo nixos-rebuild switch -I nixos-config="$CONFIG_FILE"
 
 # To run this file use the command: os-rebuild
