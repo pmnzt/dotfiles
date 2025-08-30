@@ -106,6 +106,7 @@
      pnpm
      unzip 
      xfce.thunar-archive-plugin
+     xarchiver
   ];
 
   services.gnome.gnome-keyring.enable = true;
