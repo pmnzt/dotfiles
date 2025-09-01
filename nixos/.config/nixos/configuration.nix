@@ -111,7 +111,7 @@
      xfce.thunar-archive-plugin
      xarchiver
      file-roller
-     sublime4
+     sublime3
   ];
 
   services.gnome.gnome-keyring.enable = true;
