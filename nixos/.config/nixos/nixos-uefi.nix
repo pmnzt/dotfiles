@@ -109,6 +109,7 @@
      pnpm
      polkit
      lxqt.lxqt-policykit
+     file-roller
   ];
 
   services.postgresql.enable = true;
